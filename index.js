@@ -156,13 +156,15 @@ function getName(person) {
 function appleIndex(fruit) {
   /* code here */
 
-  // Loop through our fruit
+  // Loop through our fruit (fruit loops) lol 1980 shii**t stuff.
   for(let index = 0; index < fruit.length; index++){
-    // Find the 'apple' index
+    // Find the 'apple' index. Atari killed Apple back in the day.
     if(fruit[index] == 'apple'){
       return index;
     }
   }
+
+  // Nice and semantic.
     
 }
 
@@ -189,7 +191,8 @@ function isItAnApple(fruit) {
 
   // Loop through our fruit array
   for(let index = 0; index < fruit.length; index++){
-    // Find all the apples
+
+    // Look for 'apple'
     if(fruit[index] == 'apple'){
       foundApples.push(true);
     }else{
@@ -322,7 +325,7 @@ function getCarInfoById(inventory, id) {
   
   // Loop through the inventory array
   for(let index = 0; index < inventory.length; index++){
-    // Find the item with the supplid 'id'
+    // Find the item with the 'id'
     if(inventory[index].id == id){
       // Return the car with the matching 'id'
       return `This is a ${inventory[index].car_make} ${inventory[index].car_model}`;
@@ -416,12 +419,13 @@ function carMaker(currentOdometer) {
   /* code here */
 
   // Creat our new object
-  var newOdometer = {
+  const newOdometer = {
     odometer: currentOdometer,
 
     // Add the function called drive
     drive: function(distance) {
-      return this.odometer + distance;
+      this.odometer += distance;
+      return this.odometer;
     }
   };
 
